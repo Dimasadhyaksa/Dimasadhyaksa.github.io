@@ -46,8 +46,7 @@
       <img src="img/foto4.jpg" alt="dimas" width="200px" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Dimas adhyaksa</h1>
       <p class="lead">Freelancer|Developer</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L60,122.7C120,149,240,203,360,197.3C480,192,600,128,720,117.3C840,107,960,149,1080,149.3C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L60,122.7C120,149,240,203,360,197.3C480,192,600,128,720,117.3C840,107,960,149,1080,149.3C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </section>
     <!--akhir jumbotron -->
 
@@ -190,18 +189,18 @@
     
       form.addEventListener('submit', e => {
         e.preventDefault()
-        <!-- ketika_tombol_submit_di_tekan -->
-        <!-- tampilkan_tombol_loading,hilangkan_tombol_kirim -->
+        //ketika_tombol_submit_di_tekan 
+        //tampilkan_tombol_loading,hilangkan_tombol_kirim 
         btnLoading.classList.toggle('d-none');
         btnKirim.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            <!-- tampilkan_tombol_kirim,hilangkan_tombol_loading -->
+            // tampilkan_tombol_kirim,hilangkan_tombol_loading 
             btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
-            <!-- tampilkan_tombol_alert -->
+            // tampilkan_tombol_alert 
             myAlert.classList.toggle('d-none');
-            <!-- reset_form_nya -->
+            // reset_form_nya 
             form.reset();
             console.log('Success!', response)})
           .catch(error => console.error('Error!', error.message))
