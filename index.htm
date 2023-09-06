@@ -190,18 +190,18 @@
     
       form.addEventListener('submit', e => {
         e.preventDefault()
-        <!-- ketika tombol submit di tekan -->
-        <!-- tampilkan tombol loading,hilangkan tombol kirim -->
+        <!-- ketika_tombol_submit_di_tekan -->
+        <!-- tampilkan_tombol_loading,hilangkan_tombol_kirim -->
         btnLoading.classList.toggle('d-none');
         btnKirim.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            <!-- tampilkan tombol kirim,hilangkan tombol loading -->
+            <!-- tampilkan_tombol_kirim,hilangkan_tombol_loading -->
             btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
-            <!-- tampilkan tombol alert -->
+            <!-- tampilkan_tombol_alert -->
             myAlert.classList.toggle('d-none');
-            <!-- reset form nya -->
+            <!-- reset_form_nya -->
             form.reset();
             console.log('Success!', response)})
           .catch(error => console.error('Error!', error.message))
